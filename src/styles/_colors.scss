@@ -1,0 +1,56 @@
+.theme-1 {
+	//backgrounds
+	--bg-main: hsl(222, 26%, 31%);
+	--bg-keypad: hsl(223, 31%, 20%);
+	--bg-screen: hsl(224, 36%, 15%);
+	//keys
+	--key-bg-main: hsl(30, 25%, 89%);
+	--key-sdw-main: hsl(28, 16%, 65%);
+	--key-bg-accent: hsl(225, 21%, 49%);
+	--key-sdw-accent: hsl(224, 28%, 35%);
+	--key-bg-important: hsl(6, 63%, 50%);
+	--key-sdw-important: hsl(6, 70%, 34%);
+	//text
+	--txt-keys: hsl(221, 14%, 31%);
+	--txt-keys-accent1: hsl(0, 0%, 100%);
+	--txt-keys-accent2: hsl(0, 0%, 100%);
+	--txt-disp: hsl(0, 0%, 100%);
+}
+
+.theme-2 {
+	//backgrounds
+	--bg-main: hsl(0, 0%, 90%);
+	--bg-keypad: hsl(0, 5%, 81%);
+	--bg-screen: hsl(0, 0%, 93%);
+	//keys
+	--key-bg-main: hsl(45, 7%, 89%);
+	--key-sdw-main: hsl(35, 11%, 61%);
+	--key-bg-accent: hsl(185, 42%, 37%);
+	--key-sdw-accent: hsl(185, 58%, 25%);
+	--key-bg-important: hsl(25, 98%, 40%);
+	--key-sdw-important: hsl(25, 99%, 27%);
+	//text
+	--txt-keys: hsl(60, 10%, 19%);
+	--txt-keys-accent1: hsl(0, 0%, 100%);
+	--txt-keys-accent2: hsl(0, 0%, 100%);
+	--txt-disp: hsl(60, 10%, 19%);
+}
+
+.theme-3 {
+	//backgrounds
+	--bg-main: hsl(268, 75%, 9%);
+	--bg-keypad: hsl(268, 71%, 12%);
+	--bg-screen: hsl(268, 71%, 12%);
+	//keys
+	--key-bg-main: hsl(268, 47%, 21%);
+	--key-sdw-main: hsl(290, 70%, 36%);
+	--key-bg-accent: hsl(281, 89%, 26%);
+	--key-sdw-accent: hsl(285, 91%, 52%);
+	--key-bg-important: hsl(176, 100%, 44%);
+	--key-sdw-important: hsl(177, 92%, 70%);
+	//text
+	--txt-keys: hsl(52, 100%, 62%);
+	--txt-keys-accent1: hsl(0, 0%, 100%);
+	--txt-keys-accent2: hsl(198, 20%, 13%);
+	--txt-disp: hsl(52, 100%, 62%);
+}
