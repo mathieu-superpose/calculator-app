@@ -7,10 +7,6 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./src/img/favicon-32x32.png">
     <title>Frontend Mentor | Calculator app</title>
     <link rel="stylesheet" href="src/styles/style.css">
-    <!-- <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style> -->
 </head>
 
 <body>
@@ -27,7 +23,7 @@
                         <option value="2" label="2">
                         <option value="3" label="3">
                     </datalist>
-                    <input class="calculator__head__right__themes__selector" type="range" name="themes" min="1" max="3">
+                    <input class="calculator__head__right__themes__selector" type="range" name="themes" min="1" max="3" oninput="setTheme(this.value)" onchange="setTheme(this.value)">
                 </div>
             </div>
         </div>
@@ -55,10 +51,6 @@
             <button class="calculator__numpad__equalKey">=</button>
         </div>
     </div>
-    <!-- <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div> -->
 </body>
 <script src="./src/js/themes.js"></script>
 <script src="./src/js/calculator.js"></script>
