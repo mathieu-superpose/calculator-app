@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./src/img/favicon-32x32.png">
+    <title>Frontend Mentor | Calculator app</title>
+    <link rel="stylesheet" href="src/styles/style.css">
+    <!-- <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style> -->
+</head>
+
+<body>
+    <div class="calculator">
+        <div class="calculator__head">
+            <div class="calculator__head__left">
+                <h1 class="calculator__head__left__title">calc</h1>
+            </div>
+            <div class="calculator__head__right">
+                <p class="calculator__head__right__title">THEME</p>
+                <div class="calculator__head__right__themes">
+                    <datalist id="tickmarks" class="calculator__head__right__themes__marks">
+                        <option value="1" label="1">
+                        <option value="2" label="2">
+                        <option value="3" label="3">
+                    </datalist>
+                    <input class="calculator__head__right__themes__selector" type="range" name="themes" min="1" max="3">
+                </div>
+            </div>
+        </div>
+        <div class="calculator__display">
+            <p class="calculator__display__total">399,981</p>
+        </div>
+        <div class="calculator__numpad">
+            <button class="calculator__numpad__key">7</button>
+            <button class="calculator__numpad__key">8</button>
+            <button class="calculator__numpad__key">9</button>
+            <button class="calculator__numpad__delKey">DEL</button>
+            <button class="calculator__numpad__key">4</button>
+            <button class="calculator__numpad__key">5</button>
+            <button class="calculator__numpad__key">6</button>
+            <button class="calculator__numpad__key">+</button>
+            <button class="calculator__numpad__key">1</button>
+            <button class="calculator__numpad__key">2</button>
+            <button class="calculator__numpad__key">3</button>
+            <button class="calculator__numpad__key">-</button>
+            <button class="calculator__numpad__key">.</button>
+            <button class="calculator__numpad__key">0</button>
+            <button class="calculator__numpad__key">/</button>
+            <button class="calculator__numpad__key">x</button>
+            <button class="calculator__numpad__resetKey">RESET</button>
+            <button class="calculator__numpad__equalKey">=</button>
+        </div>
+    </div>
+    <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+</body>
+<script src="./src/js/themes.js"></script>
+<script src="./src/js/calculator.js"></script>
+
+</html>

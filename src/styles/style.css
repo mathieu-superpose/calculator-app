@@ -1,0 +1,208 @@
+* {
+  padding: 0;
+  margin: 0; }
+
+.theme-1 {
+  --bg-main: hsl(222, 26%, 31%);
+  --bg-keypad: hsl(223, 31%, 20%);
+  --bg-screen: hsl(224, 36%, 15%);
+  --key-bg-main: hsl(30, 25%, 89%);
+  --key-sdw-main: hsl(28, 16%, 65%);
+  --key-bg-accent: hsl(225, 21%, 49%);
+  --key-sdw-accent: hsl(224, 28%, 35%);
+  --key-bg-important: hsl(6, 63%, 50%);
+  --key-sdw-important: hsl(6, 70%, 34%);
+  --txt-keys: hsl(221, 14%, 31%);
+  --txt-keys-accent1: hsl(0, 0%, 100%);
+  --txt-keys-accent2: hsl(0, 0%, 100%);
+  --txt-disp: hsl(0, 0%, 100%); }
+
+.theme-2 {
+  --bg-main: hsl(0, 0%, 90%);
+  --bg-keypad: hsl(0, 5%, 81%);
+  --bg-screen: hsl(0, 0%, 93%);
+  --key-bg-main: hsl(45, 7%, 89%);
+  --key-sdw-main: hsl(35, 11%, 61%);
+  --key-bg-accent: hsl(185, 42%, 37%);
+  --key-sdw-accent: hsl(185, 58%, 25%);
+  --key-bg-important: hsl(25, 98%, 40%);
+  --key-sdw-important: hsl(25, 99%, 27%);
+  --txt-keys: hsl(60, 10%, 19%);
+  --txt-keys-accent1: hsl(0, 0%, 100%);
+  --txt-keys-accent2: hsl(0, 0%, 100%);
+  --txt-disp: hsl(60, 10%, 19%); }
+
+.theme-3 {
+  --bg-main: hsl(268, 75%, 9%);
+  --bg-keypad: hsl(268, 71%, 12%);
+  --bg-screen: hsl(268, 71%, 12%);
+  --key-bg-main: hsl(268, 47%, 21%);
+  --key-sdw-main: hsl(290, 70%, 36%);
+  --key-bg-accent: hsl(281, 89%, 26%);
+  --key-sdw-accent: hsl(285, 91%, 52%);
+  --key-bg-important: hsl(176, 100%, 44%);
+  --key-sdw-important: hsl(177, 92%, 70%);
+  --txt-keys: hsl(52, 100%, 62%);
+  --txt-keys-accent1: hsl(0, 0%, 100%);
+  --txt-keys-accent2: hsl(198, 20%, 13%);
+  --txt-disp: hsl(52, 100%, 62%); }
+
+@font-face {
+  font-family: "Spartan";
+  src: url("../fonts/spartan/Spartan-VariableFont_wght.ttf") format("truetype"); }
+/* Set up Roboto for old browsers, only regular + bold */
+@font-face {
+  font-family: Spartan;
+  src: url("../fonts/spartan/Spartan-VariableFont_wght.ttf");
+  font-weight: normal; }
+@font-face {
+  font-family: Spartan;
+  src: url("../fonts/spartan/Spartan-VariableFont_wght.ttf");
+  font-weight: bold; }
+body {
+  font-family: Spartan; }
+
+/* Set up Roboto for modern browsers, all weights */
+@supports (font-variation-settings: normal) {
+  @font-face {
+    font-family: 'Spartan';
+    src: url("../fonts/spartan/Spartan-VariableFont_wght.ttf") format("truetype"); } }
+body {
+  min-height: 100vh;
+  background: var(--bg-main);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Spartan"; }
+
+.calculator {
+  margin-top: 2vh;
+  width: min(90vw, 600px); }
+  .calculator__head {
+    margin: 0 0.5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
+    @media (min-width: 768px) {
+      .calculator__head {
+        margin: 0 2vh; } }
+    .calculator__head__left__title {
+      color: var(--txt-disp); }
+    .calculator__head__right {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+      gap: 1em; }
+      .calculator__head__right__title {
+        font-size: 0.7em;
+        font-weight: 700;
+        color: var(--txt-disp);
+        margin-bottom: 6px; }
+      .calculator__head__right__themes__selector {
+        -webkit-appearance: none;
+        width: 50px;
+        height: 20px;
+        padding: 0 4px;
+        background: var(--bg-keypad);
+        border-radius: 15px;
+        outline: none;
+        opacity: 1;
+        -webkit-transition: .2s;
+        transition: opacity .2s; }
+        .calculator__head__right__themes__selector::-webkit-slider-thumb {
+          -webkit-appearance: none;
+          appearance: none;
+          width: 16px;
+          height: 16px;
+          border-radius: 50%;
+          background: var(--key-bg-important);
+          cursor: pointer; }
+        .calculator__head__right__themes__selector::-moz-range-thumb {
+          width: 16px;
+          height: 16px;
+          background: var(--key-bg-important);
+          cursor: pointer; }
+      .calculator__head__right__themes__marks {
+        display: flex;
+        justify-content: space-around; }
+        .calculator__head__right__themes__marks option {
+          color: var(--txt-disp);
+          font-size: 0.7em;
+          font-weight: 700; }
+  .calculator__display {
+    background: var(--bg-screen);
+    height: 10vh;
+    margin: 0.5em;
+    padding: 0.7em 1.5em;
+    border-radius: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end; }
+    @media (min-width: 768px) {
+      .calculator__display {
+        padding: 1em 2em;
+        margin: 2vh; } }
+    .calculator__display__total {
+      font-size: 3em;
+      font-weight: 700;
+      color: var(--txt-disp); }
+  .calculator__numpad {
+    background: var(--bg-keypad);
+    height: 50vh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-gap: 1em;
+    margin: 0.5em;
+    padding: 1.8em;
+    border-radius: 10px; }
+    @media (min-width: 768px) {
+      .calculator__numpad {
+        grid-gap: 1.8em;
+        margin: 2vh;
+        padding: 2.2em; } }
+    .calculator__numpad__key, .calculator__numpad__delKey, .calculator__numpad__resetKey, .calculator__numpad__equalKey {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding-top: 4px;
+      border-radius: 10px;
+      font-size: 1.1em;
+      border: none;
+      font-family: "Spartan";
+      font-weight: 600; }
+      @media (min-width: 768px) {
+        .calculator__numpad__key, .calculator__numpad__delKey, .calculator__numpad__resetKey, .calculator__numpad__equalKey {
+          font-size: 1.5em; } }
+    .calculator__numpad__delKey, .calculator__numpad__resetKey {
+      background: var(--key-bg-accent);
+      color: var(--txt-keys-accent1);
+      box-shadow: 0 5px var(--key-sdw-accent); }
+      .calculator__numpad__delKey:active, .calculator__numpad__resetKey:active {
+        box-shadow: 0 1px var(--key-sdw-accent);
+        transform: translateY(3px); }
+    .calculator__numpad__key {
+      background: var(--key-bg-main);
+      color: var(--txt-keys);
+      box-shadow: 0 5px var(--key-sdw-main);
+      font-size: 1.6em; }
+      .calculator__numpad__key:active {
+        box-shadow: 0 1px var(--key-sdw-main);
+        transform: translateY(3px); }
+      @media (min-width: 768px) {
+        .calculator__numpad__key {
+          font-size: 2em; } }
+    .calculator__numpad__resetKey {
+      grid-column: 1 / 3; }
+    .calculator__numpad__equalKey {
+      background: var(--key-bg-important);
+      color: var(--txt-keys-accent2);
+      grid-column: 3 / 5;
+      box-shadow: 0 5px var(--key-sdw-important); }
+      .calculator__numpad__equalKey:active {
+        box-shadow: 0 1px var(--key-sdw-important);
+        transform: translateY(3px); }
+
+/*# sourceMappingURL=style.css.map */
