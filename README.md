@@ -23,7 +23,11 @@ Users should be able to:
 
 ### Screenshot and livesite
 
-- [Live Site](https://your-live-site-url.com)
+<p align="center">
+  <img alt="claculator app screenshot" src="./public/img/screenshot.png"/>
+</p>
+
+- [Live Site](https://mathieu-superpose.github.io/calculator-app/)
 
 ## Built with
 
