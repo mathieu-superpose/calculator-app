@@ -6,6 +6,7 @@ This is a solution to the [Calculator app challenge on Frontend Mentor](https://
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
+  - [Future Improvements](#future-improvements)
   - [Screenshot](#screenshot-and-livesite)
 - [Built with](#built-with)
 - [Author](#author)
@@ -20,6 +21,11 @@ Users should be able to:
 - Perform mathmatical operations like addition, subtraction, multiplication, and division
 - Adjust the color theme based on their preference
 - **Bonus**: Have their initial theme preference checked using `prefers-color-scheme` and have any additional changes saved in the browser
+
+### Future Improvements
+
+- Handle long floating numbers
+- Issues with Javascript computation of floating numbers
 
 ### Screenshot and livesite
 
