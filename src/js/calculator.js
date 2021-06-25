@@ -5,7 +5,12 @@ let total = new Number();
 let currentDisplay = '';
 
 const filterNumber = (number) => {
- return number === '0' ? ['0', '', '0', ''] : number.match(/(-?)([1-9][0-9]*)(.?[0-9]{0,3})/)
+	if (/^00/.test(number)) {
+		console.log('delete zero');
+		number = '0';
+		currentDisplay = '0';
+	}
+	return number === '0' ? ['0', '', '0', undefined] : number.match(/(-?)([0-9]{1,})(.[0-9]{1,3})?/)
 }
 
 const addComma = (number) => {
@@ -15,9 +20,11 @@ const addComma = (number) => {
 }
 
 const displayNumber = (number) => {
+	if (number.includes('e')) return number;
 	const filteredNum = filterNumber(number);
+	console.log(filteredNum);
 	if (filteredNum[2] && filteredNum[2].length > 9) return filteredNum[1] + scientificNotation(number);
-	if (filteredNum[3] == '') return filteredNum[1] + addComma(filteredNum[2]) + '.';
+	if (filteredNum[3] == undefined) return filteredNum[0] + '.';
 	return filteredNum[1] + addComma(filteredNum[2]) + filteredNum[3];
 }
 
@@ -41,7 +48,7 @@ const pressNum = (num) => {
 }
 
 const pressDot = () => {
-	if(filterNumber(currentDisplay)[3] == '') {
+	if(filterNumber(currentDisplay)[3] == undefined) {
 		currentDisplay += '.';
 	}
 }
