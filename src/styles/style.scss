@@ -1,0 +1,193 @@
+@import './resets';
+@import './colors';
+@import './fonts';
+
+body {
+	min-height: 100vh;
+	background: var(--bg-main);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-family: "Spartan";
+}
+
+.calculator {
+	margin-top: 2vh;
+	width: min(90vw, 600px);
+	&__head {
+		margin: 0 0.5em;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		@media (min-width: 768px) {
+			margin: 0 2vh;
+		}
+
+		&__left {
+			&__title {
+				color: var(--txt-disp);
+			}
+		}
+		&__right {
+			display: flex;
+			flex-direction: row;
+			align-items: flex-end;
+			gap: 1em;
+			&__title {
+				font-size: 0.7em;
+				font-weight: 700;
+				color: var(--txt-disp);
+				margin-bottom: 6px;
+			}
+			&__themes {
+				&__selector {
+					-webkit-appearance: none;
+					width: 50px;
+					height: 20px;
+					padding: 0 4px;
+					background: var(--bg-keypad);
+					border-radius: 15px;
+					outline: none;
+					opacity: 1;
+					-webkit-transition: .2s;
+					transition: opacity .2s;
+
+					&::-webkit-slider-thumb {
+						-webkit-appearance: none;
+						appearance: none;
+						width: 16px;
+						height: 16px;
+						border-radius: 50%;
+						background: var(--key-bg-important);
+						cursor: pointer;
+					}
+					&::-moz-range-thumb {
+						width: 16px;
+						height: 16px;
+						background: var(--key-bg-important);
+						cursor: pointer;
+					}
+				}
+				&__marks {
+					display: flex;
+					justify-content: space-around;
+					& option {
+						color: var(--txt-disp);
+						font-size: 0.7em;
+						font-weight: 700;
+					}
+				}
+			}
+		}
+	}
+	&__display {
+		background: var(--bg-screen);
+		height: 10vh;
+		margin: 0.5em;
+		padding: 0.7em 1.5em;
+		border-radius: 10px;
+		display: flex;
+		justify-content: flex-end;
+		align-items: flex-end;
+		@media (min-width: 768px) {
+			padding: 1em 2em;
+			margin: 2vh;
+		}
+		&__total {
+			font-size: 3em;
+			font-weight: 700;
+			color: var(--txt-disp);
+		}
+		&__operator {
+			width: 1.1em;
+			height: 1.1em;
+			padding-top: 3px;
+			font-size: 0.8em;
+			font-weight: 700;
+			background: var(--txt-disp);
+			color: var(--bg-screen);
+			border-radius: 5px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: relative;
+			left: 10px;
+			visibility: hidden;
+		}
+	}
+	&__numpad {
+		background: var(--bg-keypad);
+		height: 50vh;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: repeat(5, 1fr);
+		grid-gap: 1em;
+		margin: 0.5em;
+		padding: 1.8em;
+		border-radius: 10px;
+		@media (min-width: 768px) {
+			grid-gap: 1.8em;
+			margin: 2vh;
+			padding: 2.2em;
+		}
+		&__key,
+		&__num,
+		&__op,
+		&__delKey,
+		&__resetKey,
+		&__equalKey {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			padding-top: 4px;
+			border-radius: 10px;
+			font-size: 1.1em;
+			border: none;
+			font-family: "Spartan";
+			font-weight: 600;
+			@media (min-width: 768px) {
+				font-size: 1.5em;
+			}
+		}
+		&__delKey,
+		&__resetKey {
+			background: var(--key-bg-accent);
+			color: var(--txt-keys-accent1);
+			box-shadow: 0 5px var(--key-sdw-accent);
+			&:active {
+				box-shadow: 0 1px var(--key-sdw-accent);
+				transform: translateY(3px);
+			}
+		}
+		&__key,
+		&__num,
+		&__op {
+			background: var(--key-bg-main);
+			color: var(--txt-keys);
+			box-shadow: 0 5px var(--key-sdw-main);
+			font-size: 1.6em;
+			&:active {
+				box-shadow: 0 1px var(--key-sdw-main);
+				transform: translateY(3px);
+			}
+			@media (min-width: 768px) {
+				font-size: 2em;
+			}
+		}
+		&__resetKey {
+			grid-column: 1 / 3;
+		}
+		&__equalKey {
+			background: var(--key-bg-important);
+			color: var(--txt-keys-accent2);
+			grid-column: 3 / 5;
+			box-shadow: 0 5px var(--key-sdw-important);
+			&:active {
+				box-shadow: 0 1px var(--key-sdw-important);
+				transform: translateY(3px);
+			}
+		}
+	}
+}

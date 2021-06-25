@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./src/img/favicon-32x32.png">
+    <title>Frontend Mentor | Calculator app</title>
+    <link rel="stylesheet" href="src/styles/style.css">
+</head>
+
+<body>
+    <div class="calculator">
+        <div class="calculator__head">
+            <div class="calculator__head__left">
+                <h1 class="calculator__head__left__title">calc</h1>
+            </div>
+            <div class="calculator__head__right">
+                <p class="calculator__head__right__title">THEME</p>
+                <div class="calculator__head__right__themes">
+                    <datalist id="tickmarks" class="calculator__head__right__themes__marks">
+                        <option value="1" label="1">
+                        <option value="2" label="2">
+                        <option value="3" label="3">
+                    </datalist>
+                    <input class="calculator__head__right__themes__selector" type="range" name="themes" min="1" max="3" oninput="setTheme(this.value)" onchange="setTheme(this.value)">
+                </div>
+            </div>
+        </div>
+        <div class="calculator__display">
+            <p class="calculator__display__total">0.</p>
+            <p class="calculator__display__operator"></p>
+        </div>
+        <div class="calculator__numpad">
+            <button data-key="55" class="calculator__numpad__num" onclick="pressNum('7')">7</button>
+            <button data-key="56" class="calculator__numpad__num" onclick="pressNum('8')">8</button>
+            <button data-key="57" class="calculator__numpad__num" onclick="pressNum('9')">9</button>
+            <button data-key="8" class="calculator__numpad__delKey" onclick="pressDel()">DEL</button>
+            <button data-key="52" class="calculator__numpad__num" onclick="pressNum('4')">4</button>
+            <button data-key="53" class="calculator__numpad__num" onclick="pressNum('5')">5</button>
+            <button data-key="54" class="calculator__numpad__num" onclick="pressNum('6')">6</button>
+            <button data-key="187" class="calculator__numpad__op" onclick="pressOp('+')">+</button>
+            <button data-key="49" class="calculator__numpad__num" onclick="pressNum('1')">1</button>
+            <button data-key="50" class="calculator__numpad__num" onclick="pressNum('2')">2</button>
+            <button data-key="51" class="calculator__numpad__num" onclick="pressNum('3')">3</button>
+            <button data-key="189" class="calculator__numpad__op" onclick="pressOp('-')">-</button>
+            <button data-key="190" class="calculator__numpad__key" onclick="pressDot()">.</button>
+            <button data-key="48" class="calculator__numpad__num" onclick="pressNum('0')">0</button>
+            <button data-key="191" class="calculator__numpad__op" onclick="pressOp('÷')">/</button>
+            <button data-key="221" class="calculator__numpad__op" onclick="pressOp('x')">x</button>
+            <button data-key="82" class="calculator__numpad__resetKey" onclick="pressRes()">RESET</button>
+            <button data-key="13" class="calculator__numpad__equalKey" onclick="pressTot()">=</button>
+        </div>
+    </div>
+</body>
+<script src="./src/js/themes.js"></script>
+<script src="./src/js/calculator.js"></script>
+
+</html>

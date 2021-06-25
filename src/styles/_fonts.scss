@@ -1,0 +1,29 @@
+@font-face {
+ font-family: "Spartan";
+ src: url("../fonts/spartan/Spartan-VariableFont_wght.ttf") format("truetype");
+}
+
+/* Set up Roboto for old browsers, only regular + bold */
+@font-face {
+  font-family: Spartan;
+  src: url("../fonts/spartan/Spartan-VariableFont_wght.ttf");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Spartan;
+  src: url("../fonts/spartan/Spartan-VariableFont_wght.ttf");
+  font-weight: bold;
+}
+
+body {
+  font-family: Spartan;
+}
+
+/* Set up Roboto for modern browsers, all weights */
+@supports (font-variation-settings: normal) {
+  @font-face {
+    font-family: 'Spartan';
+    src: url("../fonts/spartan/Spartan-VariableFont_wght.ttf") format("truetype");
+  }
+}
