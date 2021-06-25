@@ -26,6 +26,7 @@ Users should be able to:
 
 - Handle long floating numbers
 - Issues with Javascript computation of floating numbers
+- Write better JS calculator
 
 ### Screenshot and livesite
 
