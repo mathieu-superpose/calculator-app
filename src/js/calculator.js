@@ -21,7 +21,6 @@ const addComma = (number) => {
 const displayNumber = (number) => {
 	if (number.includes('e')) return number;
 	const filteredNum = filterNumber(number);
-	console.log(filteredNum);
 	if (filteredNum[2] && filteredNum[2].length > 9) return filteredNum[1] + scientificNotation(number);
 	if (filteredNum[3] == undefined) return filteredNum[0] + '.';
 	return filteredNum[1] + addComma(filteredNum[2]) + filteredNum[3];
