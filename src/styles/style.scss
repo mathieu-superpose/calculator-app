@@ -99,6 +99,22 @@ body {
 			font-weight: 700;
 			color: var(--txt-disp);
 		}
+		&__operator {
+			width: 1.1em;
+			height: 1.1em;
+			padding-top: 3px;
+			font-size: 0.8em;
+			font-weight: 700;
+			background: var(--txt-disp);
+			color: var(--bg-screen);
+			border-radius: 5px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: relative;
+			left: 10px;
+			visibility: hidden;
+		}
 	}
 	&__numpad {
 		background: var(--bg-keypad);
@@ -116,6 +132,8 @@ body {
 			padding: 2.2em;
 		}
 		&__key,
+		&__num,
+		&__op,
 		&__delKey,
 		&__resetKey,
 		&__equalKey {
@@ -143,7 +161,9 @@ body {
 				transform: translateY(3px);
 			}
 		}
-		&__key {
+		&__key,
+		&__num,
+		&__op {
 			background: var(--key-bg-main);
 			color: var(--txt-keys);
 			box-shadow: 0 5px var(--key-sdw-main);

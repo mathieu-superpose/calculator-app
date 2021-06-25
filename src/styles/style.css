@@ -147,6 +147,21 @@ body {
       font-size: 3em;
       font-weight: 700;
       color: var(--txt-disp); }
+    .calculator__display__operator {
+      width: 1.1em;
+      height: 1.1em;
+      padding-top: 3px;
+      font-size: 0.8em;
+      font-weight: 700;
+      background: var(--txt-disp);
+      color: var(--bg-screen);
+      border-radius: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      left: 10px;
+      visibility: hidden; }
   .calculator__numpad {
     background: var(--bg-keypad);
     height: 50vh;
@@ -162,7 +177,7 @@ body {
         grid-gap: 1.8em;
         margin: 2vh;
         padding: 2.2em; } }
-    .calculator__numpad__key, .calculator__numpad__delKey, .calculator__numpad__resetKey, .calculator__numpad__equalKey {
+    .calculator__numpad__key, .calculator__numpad__num, .calculator__numpad__op, .calculator__numpad__delKey, .calculator__numpad__resetKey, .calculator__numpad__equalKey {
       display: flex;
       flex-direction: row;
       justify-content: center;
@@ -174,7 +189,7 @@ body {
       font-family: "Spartan";
       font-weight: 600; }
       @media (min-width: 768px) {
-        .calculator__numpad__key, .calculator__numpad__delKey, .calculator__numpad__resetKey, .calculator__numpad__equalKey {
+        .calculator__numpad__key, .calculator__numpad__num, .calculator__numpad__op, .calculator__numpad__delKey, .calculator__numpad__resetKey, .calculator__numpad__equalKey {
           font-size: 1.5em; } }
     .calculator__numpad__delKey, .calculator__numpad__resetKey {
       background: var(--key-bg-accent);
@@ -183,16 +198,16 @@ body {
       .calculator__numpad__delKey:active, .calculator__numpad__resetKey:active {
         box-shadow: 0 1px var(--key-sdw-accent);
         transform: translateY(3px); }
-    .calculator__numpad__key {
+    .calculator__numpad__key, .calculator__numpad__num, .calculator__numpad__op {
       background: var(--key-bg-main);
       color: var(--txt-keys);
       box-shadow: 0 5px var(--key-sdw-main);
       font-size: 1.6em; }
-      .calculator__numpad__key:active {
+      .calculator__numpad__key:active, .calculator__numpad__num:active, .calculator__numpad__op:active {
         box-shadow: 0 1px var(--key-sdw-main);
         transform: translateY(3px); }
       @media (min-width: 768px) {
-        .calculator__numpad__key {
+        .calculator__numpad__key, .calculator__numpad__num, .calculator__numpad__op {
           font-size: 2em; } }
     .calculator__numpad__resetKey {
       grid-column: 1 / 3; }
