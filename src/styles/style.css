@@ -113,14 +113,14 @@ body {
         .calculator__head__right__themes__selector::-webkit-slider-thumb {
           -webkit-appearance: none;
           appearance: none;
-          width: 16px;
-          height: 16px;
+          width: 14px;
+          height: 14px;
           border-radius: 50%;
           background: var(--key-bg-important);
           cursor: pointer; }
         .calculator__head__right__themes__selector::-moz-range-thumb {
-          width: 16px;
-          height: 16px;
+          width: 14px;
+          height: 14px;
           background: var(--key-bg-important);
           cursor: pointer; }
       .calculator__head__right__themes__marks {
@@ -129,7 +129,8 @@ body {
         .calculator__head__right__themes__marks option {
           color: var(--txt-disp);
           font-size: 0.7em;
-          font-weight: 700; }
+          font-weight: 700;
+          margin-bottom: 3px; }
   .calculator__display {
     background: var(--bg-screen);
     height: 10vh;
@@ -174,9 +175,9 @@ body {
     border-radius: 10px; }
     @media (min-width: 768px) {
       .calculator__numpad {
-        grid-gap: 1.8em;
+        grid-gap: 1.3em;
         margin: 2vh;
-        padding: 2.2em; } }
+        padding: 2em; } }
     .calculator__numpad__key, .calculator__numpad__num, .calculator__numpad__op, .calculator__numpad__delKey, .calculator__numpad__resetKey, .calculator__numpad__equalKey {
       display: flex;
       flex-direction: row;
