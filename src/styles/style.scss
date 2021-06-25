@@ -56,15 +56,15 @@ body {
 					&::-webkit-slider-thumb {
 						-webkit-appearance: none;
 						appearance: none;
-						width: 16px;
-						height: 16px;
+						width: 14px;
+						height: 14px;
 						border-radius: 50%;
 						background: var(--key-bg-important);
 						cursor: pointer;
 					}
 					&::-moz-range-thumb {
-						width: 16px;
-						height: 16px;
+						width: 14px;
+						height: 14px;
 						background: var(--key-bg-important);
 						cursor: pointer;
 					}
@@ -76,6 +76,7 @@ body {
 						color: var(--txt-disp);
 						font-size: 0.7em;
 						font-weight: 700;
+						margin-bottom: 3px;
 					}
 				}
 			}
@@ -127,9 +128,9 @@ body {
 		padding: 1.8em;
 		border-radius: 10px;
 		@media (min-width: 768px) {
-			grid-gap: 1.8em;
+			grid-gap: 1.3em;
 			margin: 2vh;
-			padding: 2.2em;
+			padding: 2em;
 		}
 		&__key,
 		&__num,
