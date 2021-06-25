@@ -41,7 +41,7 @@ const pressNum = (num) => {
 }
 
 const pressDot = () => {
-	if(filterNumber(currentDisplay)[2] == '') {
+	if(filterNumber(currentDisplay)[3] == '') {
 		currentDisplay += '.';
 	}
 }
