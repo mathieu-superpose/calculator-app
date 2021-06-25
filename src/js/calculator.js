@@ -91,8 +91,8 @@ const pressDel = () => {
 }
 
 const pressRes = () => {
-	currentDisplay = '0';
-	display.innerHTML = displayNumber(currentDisplay);
+	currentDisplay = '';
+	display.innerHTML = displayNumber('0');
 	removeOp();
 	total = new Number();
 }
