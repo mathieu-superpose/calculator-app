@@ -93,7 +93,7 @@ body {
 		transition: background 0.5s ease;
 		height: 10vh;
 		margin: 0.5em;
-		padding: 0.7em 1.5em;
+		padding: 0.7em 1em;
 		border-radius: 10px;
 		display: flex;
 		justify-content: flex-end;
@@ -103,10 +103,14 @@ body {
 			margin: 2vh;
 		}
 		&__total {
-			font-size: 3em;
+			font-size: 1.7em;
 			font-weight: 700;
 			color: var(--txt-disp);
 			transition: color 0.5s ease;
+			margin-bottom: 10px;
+			@media (min-width: 768px) {
+				font-size: 3em;
+			}
 		}
 		&__operator {
 			width: 1.1em;
