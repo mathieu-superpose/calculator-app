@@ -5,10 +5,9 @@ let total = new Number();
 let currentDisplay = '';
 
 const filterNumber = (number) => {
-	if (/^00/.test(number)) {
-		console.log('delete zero');
-		number = '0';
-		currentDisplay = '0';
+	if (/^0[0-9]/.test(number)) {
+		number = number[1];
+		currentDisplay = number;
 	}
 	return number === '0' ? ['0', '', '0', undefined] : number.match(/(-?)([0-9]{1,})(.[0-9]{1,3})?/)
 }
