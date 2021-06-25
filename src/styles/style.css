@@ -88,7 +88,8 @@ body {
       .calculator__head {
         margin: 0 2vh; } }
     .calculator__head__left__title {
-      color: var(--txt-disp); }
+      color: var(--txt-disp);
+      transition: color 0.5s ease; }
     .calculator__head__right {
       display: flex;
       flex-direction: row;
@@ -98,6 +99,7 @@ body {
         font-size: 0.7em;
         font-weight: 700;
         color: var(--txt-disp);
+        transition: color 0.5s ease;
         margin-bottom: 6px; }
       .calculator__head__right__themes__selector {
         -webkit-appearance: none;
@@ -105,6 +107,7 @@ body {
         height: 20px;
         padding: 0 4px;
         background: var(--bg-keypad);
+        transition: background 0.5s ease;
         border-radius: 15px;
         outline: none;
         opacity: 1;
@@ -117,22 +120,26 @@ body {
           height: 14px;
           border-radius: 50%;
           background: var(--key-bg-important);
+          transition: background 0.5s ease;
           cursor: pointer; }
         .calculator__head__right__themes__selector::-moz-range-thumb {
           width: 14px;
           height: 14px;
           background: var(--key-bg-important);
+          transition: background 0.5s ease;
           cursor: pointer; }
       .calculator__head__right__themes__marks {
         display: flex;
         justify-content: space-around; }
         .calculator__head__right__themes__marks option {
           color: var(--txt-disp);
+          transition: color 0.5s ease;
           font-size: 0.7em;
           font-weight: 700;
           margin-bottom: 3px; }
   .calculator__display {
     background: var(--bg-screen);
+    transition: background 0.5s ease;
     height: 10vh;
     margin: 0.5em;
     padding: 0.7em 1.5em;
@@ -147,7 +154,8 @@ body {
     .calculator__display__total {
       font-size: 3em;
       font-weight: 700;
-      color: var(--txt-disp); }
+      color: var(--txt-disp);
+      transition: color 0.5s ease; }
     .calculator__display__operator {
       width: 1.1em;
       height: 1.1em;
@@ -155,6 +163,7 @@ body {
       font-size: 0.8em;
       font-weight: 700;
       background: var(--txt-disp);
+      transition: background 0.5s ease;
       color: var(--bg-screen);
       border-radius: 5px;
       display: flex;
@@ -165,6 +174,7 @@ body {
       visibility: hidden; }
   .calculator__numpad {
     background: var(--bg-keypad);
+    transition: background 0.5s ease;
     height: 50vh;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -194,14 +204,18 @@ body {
           font-size: 1.5em; } }
     .calculator__numpad__delKey, .calculator__numpad__resetKey {
       background: var(--key-bg-accent);
+      transition: background 0.5s ease;
       color: var(--txt-keys-accent1);
+      transition: color 0.5s ease;
       box-shadow: 0 5px var(--key-sdw-accent); }
       .calculator__numpad__delKey:active, .calculator__numpad__resetKey:active {
         box-shadow: 0 1px var(--key-sdw-accent);
         transform: translateY(3px); }
     .calculator__numpad__key, .calculator__numpad__num, .calculator__numpad__op {
       background: var(--key-bg-main);
+      transition: background 0.5s ease;
       color: var(--txt-keys);
+      transition: color 0.5s ease;
       box-shadow: 0 5px var(--key-sdw-main);
       font-size: 1.6em; }
       .calculator__numpad__key:active, .calculator__numpad__num:active, .calculator__numpad__op:active {
@@ -214,7 +228,9 @@ body {
       grid-column: 1 / 3; }
     .calculator__numpad__equalKey {
       background: var(--key-bg-important);
+      transition: background 0.5s ease;
       color: var(--txt-keys-accent2);
+      transition: color 0.5s ease;
       grid-column: 3 / 5;
       box-shadow: 0 5px var(--key-sdw-important); }
       .calculator__numpad__equalKey:active {

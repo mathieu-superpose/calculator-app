@@ -27,6 +27,7 @@ body {
 		&__left {
 			&__title {
 				color: var(--txt-disp);
+				transition: color 0.5s ease;
 			}
 		}
 		&__right {
@@ -38,6 +39,7 @@ body {
 				font-size: 0.7em;
 				font-weight: 700;
 				color: var(--txt-disp);
+				transition: color 0.5s ease;
 				margin-bottom: 6px;
 			}
 			&__themes {
@@ -47,6 +49,7 @@ body {
 					height: 20px;
 					padding: 0 4px;
 					background: var(--bg-keypad);
+					transition: background 0.5s ease;
 					border-radius: 15px;
 					outline: none;
 					opacity: 1;
@@ -60,12 +63,14 @@ body {
 						height: 14px;
 						border-radius: 50%;
 						background: var(--key-bg-important);
+						transition: background 0.5s ease;
 						cursor: pointer;
 					}
 					&::-moz-range-thumb {
 						width: 14px;
 						height: 14px;
 						background: var(--key-bg-important);
+						transition: background 0.5s ease;
 						cursor: pointer;
 					}
 				}
@@ -74,6 +79,7 @@ body {
 					justify-content: space-around;
 					& option {
 						color: var(--txt-disp);
+						transition: color 0.5s ease;
 						font-size: 0.7em;
 						font-weight: 700;
 						margin-bottom: 3px;
@@ -84,6 +90,7 @@ body {
 	}
 	&__display {
 		background: var(--bg-screen);
+		transition: background 0.5s ease;
 		height: 10vh;
 		margin: 0.5em;
 		padding: 0.7em 1.5em;
@@ -99,6 +106,7 @@ body {
 			font-size: 3em;
 			font-weight: 700;
 			color: var(--txt-disp);
+			transition: color 0.5s ease;
 		}
 		&__operator {
 			width: 1.1em;
@@ -107,6 +115,7 @@ body {
 			font-size: 0.8em;
 			font-weight: 700;
 			background: var(--txt-disp);
+			transition: background 0.5s ease;
 			color: var(--bg-screen);
 			border-radius: 5px;
 			display: flex;
@@ -119,6 +128,7 @@ body {
 	}
 	&__numpad {
 		background: var(--bg-keypad);
+		transition: background 0.5s ease;
 		height: 50vh;
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
@@ -155,7 +165,9 @@ body {
 		&__delKey,
 		&__resetKey {
 			background: var(--key-bg-accent);
+			transition: background 0.5s ease;
 			color: var(--txt-keys-accent1);
+			transition: color 0.5s ease;
 			box-shadow: 0 5px var(--key-sdw-accent);
 			&:active {
 				box-shadow: 0 1px var(--key-sdw-accent);
@@ -166,7 +178,9 @@ body {
 		&__num,
 		&__op {
 			background: var(--key-bg-main);
+			transition: background 0.5s ease;
 			color: var(--txt-keys);
+			transition: color 0.5s ease;
 			box-shadow: 0 5px var(--key-sdw-main);
 			font-size: 1.6em;
 			&:active {
@@ -182,7 +196,9 @@ body {
 		}
 		&__equalKey {
 			background: var(--key-bg-important);
+			transition: background 0.5s ease;
 			color: var(--txt-keys-accent2);
+			transition: color 0.5s ease;
 			grid-column: 3 / 5;
 			box-shadow: 0 5px var(--key-sdw-important);
 			&:active {
